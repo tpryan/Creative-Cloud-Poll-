@@ -1,3 +1,17 @@
+body{
+     padding: 5px;   
+}    
+
+fieldset{
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+legend {
+    font-weight:700;
+    font-size: 18px;
+}    
+
 .app{
      width: 75px;
     
@@ -5,4 +19,14 @@
 
 .mnemonic-toggle{
      width: 250px;   
+}    
+
+.result-icon {
+    -webkit-transform: scale(0); /* Safari and Chrome */
+   -webkit-transition: -webkit-transform 1s ease-out; 
+}
+
+.question{
+    font-style:italic;
+    font-size: 24px;
 }    
