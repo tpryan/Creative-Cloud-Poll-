@@ -42,4 +42,15 @@ textarea {
 
 .textinput{
      width: 100%;   
+}
+.topcoat-text-input--large:disabled {
+    height: 0;
 }    
+
+.mnemonic-toggle .app{
+     -webkit-filter: saturate(.3);
+} 
+
+.mnemonic-toggle .app-checked{
+     -webkit-filter: saturate(1.2);
+} 
