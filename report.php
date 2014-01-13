@@ -1,14 +1,35 @@
 <?php
     include_once $_SERVER['DOCUMENT_ROOT'] . '/poll/config/creds.php';
     
+    
+    
+    
     foreach ($_POST as $key => $value) {
-        if ($key != "question"){
-            appendProduct($key, $DB);
-        } else {
-            appendQuestion($value, $DB);
+        
+        if (strpos($key, "product") !== false) {
+        
+            $item_key = str_replace("product_","",$key);
+                                
+            if ($item_key != "question"){
+                appendProduct($item_key, $DB);
+            } else {
+                appendQuestion($value, $DB);
+            }
+        }
+        
+        if (strpos($key, "role") !== false) {
+        
+            $item_key = str_replace("role_","",$key);
+                                
+            if ($item_key != "if_other"){
+                appendRole($item_key, $DB);
+            } else {
+                appendOther($value, $DB);
+            }
         }
     
     }
+    
     
     function appendProduct($product, $dbInfo) {
         $dbConn = mysql_connect($dbInfo['host'], $dbInfo['username'], $dbInfo['password']) or die(mysql_error());
@@ -23,7 +44,33 @@
             $newValue = $row['votes'] + 1;
             $sql = "UPDATE FAMILIAR SET votes = " . $newValue . " WHERE product = '" .$product . "'";
         }
-         mysql_query($sql, $dbConn) or die(mysql_error());         
+        mysql_query($sql, $dbConn) or die(mysql_error());         
+        
+    }
+    
+    function appendRole($role, $dbInfo) {
+        $dbConn = mysql_connect($dbInfo['host'], $dbInfo['username'], $dbInfo['password']) or die(mysql_error());
+        mysql_select_db($dbInfo['db'], $dbConn) or die(mysql_error());
+        $entries = mysql_query(" SELECT * FROM ROLE WHERE role = '" . $role . "'", $dbConn) or die(mysql_error()); 
+        
+        if (mysql_num_rows($entries) == 0){
+            $sql = "INSERT INTO ROLE(`role`, `votes`) VALUES ('" .$role . "', 1)";
+           
+        } else {
+            $row = mysql_fetch_array($entries);
+            $newValue = $row['votes'] + 1;
+            $sql = "UPDATE ROLE SET votes = " . $newValue . " WHERE role = '" . $role . "'";
+        }
+        mysql_query($sql, $dbConn) or die(mysql_error());         
+        
+    }
+    
+    function appendOther($role, $dbInfo) {
+        $dbConn = mysql_connect($dbInfo['host'], $dbInfo['username'], $dbInfo['password']) or die(mysql_error());
+        mysql_select_db($dbInfo['db'], $dbConn) or die(mysql_error());
+        
+        $sql = "INSERT INTO OTHER(`role`) VALUES ('" . $role . "')"; 
+        mysql_query($sql, $dbConn) or die(mysql_error());         
         
     }
     
@@ -32,9 +79,7 @@
         mysql_select_db($dbInfo['db'], $dbConn) or die(mysql_error());
         
         $sql = "INSERT INTO question(`question`, `asked_on`) VALUES ('" . $question . "', NOW())"; 
-         
-         
-         mysql_query($sql, $dbConn) or die(mysql_error());         
+        mysql_query($sql, $dbConn) or die(mysql_error());         
         
     }
     
@@ -51,8 +96,7 @@
     <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
     <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="assets/topcoat/css/topcoat-mobile-light.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 <body>
     <h1>Thanks for answering!</h1>

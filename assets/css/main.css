@@ -30,3 +30,16 @@ legend {
     font-style:italic;
     font-size: 24px;
 }    
+
+textarea {
+    max-width: 100%;   
+}   
+
+.person-type {
+    width: 250px;  
+    margin-bottom: 10px;
+}   
+
+.textinput{
+     width: 100%;   
+}    

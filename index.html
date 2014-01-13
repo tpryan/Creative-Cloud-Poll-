@@ -6,160 +6,209 @@
     <meta name="viewport" content="user-scalable=no,initial-scale = 1.0,maximum-scale = 1.0">
     <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="assets/topcoat/css/topcoat-mobile-light.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css"><!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 <body>
-
+<h1>NYC Event</h1>
 
 <form action="report.php" method="post">
 
     <fieldset>
+        <legend>What do you consider your self? [Can be more than one.]</legend> 
+        
+        <label for="role_graphic_designer" class="topcoat-checkbox person-type">
+            <input type="checkbox" name="role_graphic_designer" id="role_graphic_designer"  />
+            <div class="topcoat-checkbox__checkmark"></div>
+            Graphic Designer
+        </label>
+        <label for="role_print_designer" class="topcoat-checkbox person-type">
+            <input type="checkbox" name="role_print_designer" id="role_print_designer"  />
+            <div class="topcoat-checkbox__checkmark"></div>
+            Print Designer
+        </label>
+        <label for="role_digital_designer" class="topcoat-checkbox person-type">
+            <input type="checkbox" name="role_digital_designer" id="role_digital_designer"  />
+            <div class="topcoat-checkbox__checkmark"></div>
+            Digital Designer
+        </label>
+        <label for="role_web_designer" class="topcoat-checkbox person-type">
+            <input type="checkbox" name="role_web_designer" id="role_web_designer"  />
+            <div class="topcoat-checkbox__checkmark"></div>
+            Web Designer
+        </label>
+        <label for="role_web_developer" class="topcoat-checkbox person-type">
+            <input type="checkbox" name="role_web_developer" id="role_web_developer"  />
+            <div class="topcoat-checkbox__checkmark"></div>
+            Web Developer
+        </label>
+        <label for="role_creative_director" class="topcoat-checkbox person-type">
+            <input type="checkbox" name="role_creative_director" id="role_creative_director"  />
+            <div class="topcoat-checkbox__checkmark"></div>
+            Creative Director
+        </label>
+        <label for="role_it_team" class="topcoat-checkbox person-type">
+            <input type="checkbox" name="role_it_team" id="it_team"  />
+            <div class="topcoat-checkbox__checkmark"></div>
+            IT Team
+        </label>
+        <label for="role_other" class="topcoat-checkbox person-type">
+            <input type="checkbox" name="role_other" id="role_other"  />
+            <div class="topcoat-checkbox__checkmark"></div>
+            Other
+        </label>
+        <label for="role_if_other"> 
+            <input name="role_if_other" id="role_if_other" type="text" class="topcoat-text-input--large textinput" value="" placeholder="if other">
+        
+        </label>                
+        
+    </fieldset>
+    
+    <fieldset>
         <legend>Which products are you very familiar with?</legend>
     
-        <label for="after_effects" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_after_effects" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/after_effects.svg" class="app" />
-            <input type="checkbox" name="after_effects" id="after_effects"  />
+            <input type="checkbox" name="product_after_effects" id="product_after_effects"  />
             <div class="topcoat-checkbox__checkmark"></div>
             After Effects
         </label>
         
-        <label for="audition" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_audition" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/audition.svg" class="app" />
-            <input type="checkbox" name="audition" id="audition"  />
+            <input type="checkbox" name="product_audition" id="product_audition"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Audition
         </label>
         
-        <label for="bridge" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_bridge" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/bridge.svg" class="app" />
-            <input type="checkbox" name="bridge" id="bridge"  />
+            <input type="checkbox" name="product_bridge" id="product_bridge"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Bridge
         </label>
         
-        <label for="dreamweaver" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_dreamweaver" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/dreamweaver.svg" class="app" />
-            <input type="checkbox" name="dreamweaver" id="dreamweaver"  />
+            <input type="checkbox" name="product_dreamweaver" id="product_dreamweaver"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Dreamweaver
         </label>
         
-        <label for="encore" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_encore" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/encore.svg" class="app" />
-            <input type="checkbox" name="encore" id="audition"  />
+            <input type="checkbox" name="product_encore" id="product_encore"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Encore
         </label>
         
-        <label for="fireworks" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_fireworks" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/fireworks.svg" class="app" />
-            <input type="checkbox" name="fireworks" id="fireworks"  />
+            <input type="checkbox" name="product_fireworks" id="product_fireworks"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Fireworks
         </label>
         
-        <label for="flash" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_flash" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/flash.svg" class="app" />
-            <input type="checkbox" name="flash" id="flash"  />
+            <input type="checkbox" name="product_flash" id="product_flash"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Flash
         </label>
         
-        <label for="illustrator" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_illustrator" class="topcoat-checkbox mnemonic-toggle">
              <img alt="" src="assets/img/illustrator.svg" class="app" />
-            <input type="checkbox" name="illustrator" id="illustrator"  />
+            <input type="checkbox" name="product_illustrator" id="product_illustrator"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Illustrator
         </label>
         
-         <label for="incopy" class="topcoat-checkbox mnemonic-toggle">
+         <label for="product_incopy" class="topcoat-checkbox mnemonic-toggle">
              <img alt="" src="assets/img/incopy.svg" class="app" />
-            <input type="checkbox" name="incopy" id="incopy"  />
+            <input type="checkbox" name="product_incopy" id="product_incopy"  />
             <div class="topcoat-checkbox__checkmark"></div>
             InCopy
         </label>
         
-        <label for="indesign" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_indesign" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/indesign.svg" class="app" />
-            <input type="checkbox" name="indesign" id="indesign"  />
+            <input type="checkbox" name="product_indesign" id="product_indesign"  />
             <div class="topcoat-checkbox__checkmark"></div>
             InDesign
         </label>
         
-        <label for="lightroom" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_lightroom" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/lightroom.svg" class="app" />
-            <input type="checkbox" name="lightroom" id="lightroom"  />
+            <input type="checkbox" name="product_lightroom" id="product_lightroom"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Lightroom
         </label>
         
-        <label for="encoder" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_encoder" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/media_encoder.svg" class="app" />
-            <input type="checkbox" name="encoder" id="encoder"  />
+            <input type="checkbox" name="product_encoder" id="product_encoder"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Media Encoder
         </label>
         
-        <label for="muse" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_muse" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/muse.svg" class="app" />
-            <input type="checkbox" name="muse" id="muse"  />
+            <input type="checkbox" name="product_muse" id="product_muse"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Muse
         </label>
         
-        <label for="photoshop" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_photoshop" class="topcoat-checkbox mnemonic-toggle">
              <img alt="" src="assets/img/photoshop.svg" class="app" />
-            <input type="checkbox" name="photoshop" id="photoshop"  />
+            <input type="checkbox" name="product_photoshop" id="product_photoshop"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Photoshop
         </label>
         
-        <label for="premiere" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_premiere" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/premiere.svg" class="app" />
-            <input type="checkbox" name="premiere" id="premiere"  />
+            <input type="checkbox" name="product_premiere" id="product_premiere"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Premiere Pro
         </label>
         
-        <label for="speedgrade" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_speedgrade" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/speedgrade.svg" class="app" />
-            <input type="checkbox" name="speedgrade" id="speedgrade"  />
+            <input type="checkbox" name="product_speedgrade" id="product_speedgrade"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Speedgrade
         </label>
         
-        <label for="animate" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_animate" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/animate.svg" class="edge app" />
-            <input type="checkbox" name="animate" id="animate"  />
+            <input type="checkbox" name="product_animate" id="product_animate"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Edge Animate
         </label>
         
-        <label for="code" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_code" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/code.svg" class="edge app" />
-            <input type="checkbox" name="code" id="code"  />
+            <input type="checkbox" name="product_code" id="product_code"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Edge Code
         </label>
         
-        <label for="inspect" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_inspect" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/inspect.svg" class="edge app" />
-            <input type="checkbox" name="inspect" id="inspect"  />
+            <input type="checkbox" name="product_inspect" id="product_inspect"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Edge Inspect
         </label>
         
-        <label for="pgb" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_pgb" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/phonegap_build.svg" class="edge app" />
-            <input type="checkbox" name="pgb" id="pgb"  />
+            <input type="checkbox" name="product_pgb" id="product_pgb"  />
             <div class="topcoat-checkbox__checkmark"></div>
             PhoneGap Build
         </label>
        
-        <label for="reflow" class="topcoat-checkbox mnemonic-toggle">
+        <label for="product_reflow" class="topcoat-checkbox mnemonic-toggle">
             <img alt="" src="assets/img/reflow.svg" class="edge app" />
-            <input type="checkbox" name="reflow" id="reflow"  />
+            <input type="checkbox" name="product_reflow" id="product_reflow"  />
             <div class="topcoat-checkbox__checkmark"></div>
             Edge Reflow
         </label>
@@ -178,7 +227,7 @@
     
     <fieldset>
         <legend>What one question do you want answered today?</legend>
-        <textarea class="topcoat-textarea--large" rows="6" cols="36" name="question" placeholder="Textarea"></textarea>
+        <textarea class="topcoat-textarea--large textinput" rows="6" name="product_question" placeholder="Question?"></textarea>
     </fieldset>
     <br /><br />
     <input type="submit" class="topcoat-button--large--cta" value="Go!" />
