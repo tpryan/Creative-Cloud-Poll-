@@ -21,10 +21,6 @@ legend {
      width: 250px;   
 }    
 
-.result-icon {
-    -webkit-transform: scale(0); /* Safari and Chrome */
-   -webkit-transition: -webkit-transform 1s ease-out; 
-}
 
 .question{
     font-style:italic;
@@ -54,3 +50,252 @@ textarea {
 .mnemonic-toggle .app-checked{
      -webkit-filter: saturate(1.2);
 } 
+
+.result-holder{
+    width: 150px;
+    display: inline-block;
+
+}
+
+.result-holder p{
+    margin: 0 0 5px 0;
+
+}
+
+
+.result-holder p{
+    opacity: 0.1;
+}
+
+.bar {
+    background-color: #000000;
+    width: 0;
+    height: 26px;
+    -webkit-transition: width 1.5s ease-out; 
+    vertical-align: top;
+    border: 1px solid red;
+    background-color: #dddddd;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.result-icon {
+    width: 30px;
+    vertical-align: top;
+}   
+
+th{
+    text-align: right;
+    width: 170px;
+} 
+
+
+.after_effects{
+    border-color: #262338;
+    background-color: #818BBE;
+}
+
+.audition{
+    border-color: #0A3532;
+    background-color: #2CBCAD;
+}
+
+.bridge{
+    border-color: #3C2814;
+    background-color: #FFA700;
+}
+
+.dreamweaver{
+    border-color: #1C391A;
+    background-color: #80B840;
+}
+
+.encore{
+    border-color: #19323F;
+    background-color: #5DABD9;
+}
+
+.fireworks{
+    border-color: #493717;
+    background-color: #FFC000;
+}
+
+.flash{
+    border-color: #481917;
+    background-color: #FA3B19;
+}
+
+.illustrator{
+    border-color: #43170F;
+    background-color: #FF6E13;
+}
+
+.incopy{
+    border-color: #422030;
+    background-color: #CC5496;
+}
+
+.indesign{
+    border-color: #4A2730;
+    background-color: #F8558E;
+}
+
+.lightroom{
+    border-color: #364348;
+    background-color: #A6D8EB;
+}
+
+.encoder{
+    border-color: #23303E;
+    background-color: #74A7D4;
+}
+
+.muse{
+    border-color: #343D1C;
+    background-color: #B7C62F;
+}
+
+.photoshop{
+    border-color: #0D3943;
+    background-color: #00B9DF;
+}
+
+.premiere{
+    border-color: #39243B;
+    background-color: #AA83B4;
+}
+
+.speedgrade{
+    border-color: #0B3738;
+    background-color: #00B9BF;
+}
+
+.animate{
+    border-color: #002254;
+    background-color: #7F92C4;
+}
+
+.code{
+    border-color: #163937;
+    background-color: #00C0C8;
+}
+
+.inspect{
+    border-color: #552E1D;
+    background-color: #FFA202;
+}
+
+.pgb{
+    border-color: #004D58;
+    background-color: #5FCFDF;
+}
+
+.reflow{
+    border-color: #002C46;
+    background-color: #00C3DE;
+}
+
+
+#role_results tr:nth-child(1) .bar{
+    border-color: #262338;
+    background-color: #818BBE;
+}
+
+#role_results tr:nth-child(2) .bar{
+    border-color: #0A3532;
+    background-color: #2CBCAD;
+}
+
+#role_results tr:nth-child(3) .bar{
+    border-color: #3C2814;
+    background-color: #FFA700;
+}
+
+#role_results tr:nth-child(4) .bar{
+    border-color: #1C391A;
+    background-color: #80B840;
+}
+
+#role_results tr:nth-child(5) .bar{
+    border-color: #19323F;
+    background-color: #5DABD9;
+}
+
+#role_results tr:nth-child(6) .bar{
+    border-color: #493717;
+    background-color: #FFC000;
+}
+
+#role_results tr:nth-child(7) .bar{
+    border-color: #481917;
+    background-color: #FA3B19;
+}
+
+#role_results tr:nth-child(8) .bar{
+    border-color: #43170F;
+    background-color: #FF6E13;
+}
+
+#role_results tr:nth-child(9) .bar{
+    border-color: #422030;
+    background-color: #CC5496;
+}
+
+#role_results tr:nth-child(10) .bar{
+    border-color: #4A2730;
+    background-color: #F8558E;
+}
+
+#role_results tr:nth-child(11) .bar{
+    border-color: #364348;
+    background-color: #A6D8EB;
+}
+
+#role_results tr:nth-child(12) .bar{
+    border-color: #23303E;
+    background-color: #74A7D4;
+}
+
+#role_results tr:nth-child(13) .bar{
+    border-color: #343D1C;
+    background-color: #B7C62F;
+}
+
+#role_results tr:nth-child(14) .bar{
+    border-color: #0D3943;
+    background-color: #00B9DF;
+}
+
+#role_results tr:nth-child(15) .bar{
+    border-color: #39243B;
+    background-color: #AA83B4;
+}
+
+#role_results tr:nth-child(16) .bar{
+    border-color: #0B3738;
+    background-color: #00B9BF;
+}
+
+#role_results tr:nth-child(17) .bar{
+    border-color: #002254;
+    background-color: #7F92C4;
+}
+
+#role_results tr:nth-child(18) .bar{
+    border-color: #163937;
+    background-color: #00C0C8;
+}
+
+#role_results tr:nth-child(19) .bar{
+    border-color: #552E1D;
+    background-color: #FFA202;
+}
+
+#role_results tr:nth-child(20) .bar{
+    border-color: #004D58;
+    background-color: #5FCFDF;
+}
+
+#role_results tr:nth-child(21) .bar{
+    border-color: #002C46;
+    background-color: #00C3DE;
+}
