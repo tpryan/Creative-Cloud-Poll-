@@ -37,12 +37,12 @@
         $entries = mysql_query(" SELECT * FROM FAMILIAR WHERE product = '" . $product . "'", $dbConn) or die(mysql_error()); 
         
         if (mysql_num_rows($entries) == 0){
-            $sql = "INSERT INTO FAMILIAR(`product`, `votes`) VALUES ('" .$product . "', 1)";
+            $sql = "INSERT INTO `familiar`(`product`, `votes`) VALUES ('" .$product . "', 1)";
            
         } else {
             $row = mysql_fetch_array($entries);
             $newValue = $row['votes'] + 1;
-            $sql = "UPDATE FAMILIAR SET votes = " . $newValue . " WHERE product = '" .$product . "'";
+            $sql = "UPDATE `familiar` SET votes = " . $newValue . " WHERE product = '" .$product . "'";
         }
         mysql_query($sql, $dbConn) or die(mysql_error());         
         
@@ -54,12 +54,12 @@
         $entries = mysql_query(" SELECT * FROM ROLE WHERE role = '" . $role . "'", $dbConn) or die(mysql_error()); 
         
         if (mysql_num_rows($entries) == 0){
-            $sql = "INSERT INTO ROLE(`role`, `votes`) VALUES ('" .$role . "', 1)";
+            $sql = "INSERT INTO `role`(`role`, `votes`) VALUES ('" .$role . "', 1)";
            
         } else {
             $row = mysql_fetch_array($entries);
             $newValue = $row['votes'] + 1;
-            $sql = "UPDATE ROLE SET votes = " . $newValue . " WHERE role = '" . $role . "'";
+            $sql = "UPDATE `role` SET votes = " . $newValue . " WHERE role = '" . $role . "'";
         }
         mysql_query($sql, $dbConn) or die(mysql_error());         
         
@@ -69,7 +69,7 @@
         $dbConn = mysql_connect($dbInfo['host'], $dbInfo['username'], $dbInfo['password']) or die(mysql_error());
         mysql_select_db($dbInfo['db'], $dbConn) or die(mysql_error());
         
-        $sql = "INSERT INTO OTHER(`role`) VALUES ('" . $role . "')"; 
+        $sql = "INSERT INTO `other`(`role`) VALUES ('" . $role . "')"; 
         mysql_query($sql, $dbConn) or die(mysql_error());         
         
     }
@@ -78,7 +78,7 @@
         $dbConn = mysql_connect($dbInfo['host'], $dbInfo['username'], $dbInfo['password']) or die(mysql_error());
         mysql_select_db($dbInfo['db'], $dbConn) or die(mysql_error());
         
-        $sql = "INSERT INTO question(`question`, `asked_on`) VALUES ('" . $question . "', NOW())"; 
+        $sql = "INSERT INTO `question`(`question`, `asked_on`) VALUES ('" . $question . "', NOW())"; 
         mysql_query($sql, $dbConn) or die(mysql_error());         
         
     }
