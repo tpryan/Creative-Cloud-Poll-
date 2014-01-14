@@ -34,7 +34,7 @@
     function appendProduct($product, $dbInfo) {
         $dbConn = mysql_connect($dbInfo['host'], $dbInfo['username'], $dbInfo['password']) or die(mysql_error());
         mysql_select_db($dbInfo['db'], $dbConn) or die(mysql_error());
-        $entries = mysql_query(" SELECT * FROM FAMILIAR WHERE product = '" . $product . "'", $dbConn) or die(mysql_error()); 
+        $entries = mysql_query(" SELECT * FROM `familiar` WHERE product = '" . $product . "'", $dbConn) or die(mysql_error()); 
         
         if (mysql_num_rows($entries) == 0){
             $sql = "INSERT INTO `familiar`(`product`, `votes`) VALUES ('" .$product . "', 1)";
@@ -51,7 +51,7 @@
     function appendRole($role, $dbInfo) {
         $dbConn = mysql_connect($dbInfo['host'], $dbInfo['username'], $dbInfo['password']) or die(mysql_error());
         mysql_select_db($dbInfo['db'], $dbConn) or die(mysql_error());
-        $entries = mysql_query(" SELECT * FROM ROLE WHERE role = '" . $role . "'", $dbConn) or die(mysql_error()); 
+        $entries = mysql_query(" SELECT * FROM `role` WHERE `role` = '" . $role . "'", $dbConn) or die(mysql_error()); 
         
         if (mysql_num_rows($entries) == 0){
             $sql = "INSERT INTO `role`(`role`, `votes`) VALUES ('" .$role . "', 1)";
@@ -59,7 +59,7 @@
         } else {
             $row = mysql_fetch_array($entries);
             $newValue = $row['votes'] + 1;
-            $sql = "UPDATE `role` SET votes = " . $newValue . " WHERE role = '" . $role . "'";
+            $sql = "UPDATE `role` SET votes = " . $newValue . " WHERE `role` = '" . $role . "'";
         }
         mysql_query($sql, $dbConn) or die(mysql_error());         
         
