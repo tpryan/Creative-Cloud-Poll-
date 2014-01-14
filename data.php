@@ -114,14 +114,14 @@
         }
                 
         function processQuestion(e) {
-            
+            console.log("Process Question");
             var questions = jQuery.parseJSON(e);
 
             $("#questions").html("");   
             for (var i = 0; i < questions.length; i++ ){
                 var $content = $("#questions").html();
                 var newHTML = '<p class="question">' + questions[i].question + "</p>" ;
-                $("#questions").html($content + newHTML);     
+                $("#questions").append(newHTML);     
             }
 
             setTimeout(pollQuestions,5000);

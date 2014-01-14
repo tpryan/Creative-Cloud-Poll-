@@ -69,7 +69,7 @@
         $dbConn = mysql_connect($dbInfo['host'], $dbInfo['username'], $dbInfo['password']) or die(mysql_error());
         mysql_select_db($dbInfo['db'], $dbConn) or die(mysql_error());
         
-        $sql = "INSERT INTO `other`(`role`) VALUES ('" . $role . "')"; 
+        $sql = "INSERT INTO `other`(`role`) VALUES ('" . mysql_real_escape_string($role) . "')"; 
         mysql_query($sql, $dbConn) or die(mysql_error());         
         
     }
@@ -78,7 +78,7 @@
         $dbConn = mysql_connect($dbInfo['host'], $dbInfo['username'], $dbInfo['password']) or die(mysql_error());
         mysql_select_db($dbInfo['db'], $dbConn) or die(mysql_error());
         
-        $sql = "INSERT INTO `question`(`question`, `asked_on`) VALUES ('" . $question . "', NOW())"; 
+        $sql = "INSERT INTO `question`(`question`, `asked_on`) VALUES ('" . mysql_real_escape_string($question) . "', NOW())"; 
         mysql_query($sql, $dbConn) or die(mysql_error());         
         
     }
