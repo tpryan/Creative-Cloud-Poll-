@@ -89,15 +89,22 @@
 
         function createRoleHTML(roles) {
             var $table = $("#role_results"); 
-
+            var other = "";
             for (var i = 0; i < roles.length; i++ ){
+                
+                
                 var rowHTML = "<tr>";
                 rowHTML += "<th>" + formatRole(roles[i].role) + "</th>";
                 rowHTML += '<td><div class="bar ' + roles[i].role + '"></div></td>';
                 rowHTML += "</tr>";
-                $table.append(rowHTML);
-                 
+                
+                if (roles[i].role == "other"){
+                    other = rowHTML;
+                } else {                
+                    $table.append(rowHTML);
+                } 
             } 
+            $table.append(other);
             rolesCreated = true;   
         }
         
