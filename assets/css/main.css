@@ -1,5 +1,6 @@
 body{
-     padding: 5px;   
+    padding: 5px;
+    color: #333333;
 }    
 
 fieldset{
@@ -25,7 +26,15 @@ legend {
 .question{
     font-style:italic;
     font-size: 24px;
-}    
+    color: #777777;
+}
+.question:before{
+    content: "\201C";
+}  
+
+.question:after{
+    content: "\201D";
+}
 
 textarea {
     max-width: 100%; 
@@ -51,251 +60,343 @@ textarea {
      -webkit-filter: saturate(1.2);
 } 
 
-.result-holder{
-    width: 150px;
+
+section{
+    width: 500px;
     display: inline-block;
-
+    vertical-align: top;
 }
 
-.result-holder p{
-    margin: 0 0 5px 0;
+.questions{
+    display:block;
+    width: 100%;
+}    
 
-}
-
-
-.result-holder p{
-    opacity: 0.1;
-}
 
 .bar {
     background-color: #000000;
-    width: 0;
+    width: 30px;
     height: 26px;
     -webkit-transition: width 1.5s ease-out; 
     vertical-align: top;
     border: 1px solid red;
     background-color: #dddddd;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 7px 7px 0px;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.bar span{
+    font-weight: bold;
+    padding-left: 3px;
+    background: -webkit-linear-gradient(top, rgba(225,225,225,.8), rgba(225,225,225,0));
+    border-radius: 0px 7px 7px 0px;
+    display: block;
+}
+
+.bar span span {
+    background: none;
+    display: block;
+    width: 15px;
+    text-align: right;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.other-holder {
+    margin-left: 150px;
+}
+ 
+
+.result{
+    width:500px;
+    height: 30px;
+    margin-bottom: 2px;
 }
 
 .result-icon {
     width: 30px;
     vertical-align: top;
-}   
+}  
 
-th{
+.result-holder{
+    width: 150px;
+    display: inline-block;
+}
+
+.result-holder p{
+    margin: 0 0 5px 0;
+    opacity: 0.1;
+}
+
+
+.result-label{
     text-align: right;
     width: 170px;
+    display: inline-block;
 } 
+
+.result-page {
+    background-color: #000000;
+}
+
+.result-page body{
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}    
 
 
 .after_effects{
+    color: #262338;
     border-color: #262338;
     background-color: #818BBE;
 }
 
 .audition{
+    color: #0A3532;
     border-color: #0A3532;
     background-color: #2CBCAD;
 }
 
 .bridge{
+    color: #3C2814;
     border-color: #3C2814;
     background-color: #FFA700;
 }
 
 .dreamweaver{
+    color: #1C391A;
     border-color: #1C391A;
     background-color: #80B840;
 }
 
 .encore{
+    color: #19323F;
     border-color: #19323F;
     background-color: #5DABD9;
 }
 
 .fireworks{
+    color: #493717;
     border-color: #493717;
     background-color: #FFC000;
 }
 
 .flash{
+    color: #481917;
     border-color: #481917;
     background-color: #FA3B19;
 }
 
 .illustrator{
+    color: #43170F;
     border-color: #43170F;
     background-color: #FF6E13;
 }
 
 .incopy{
+    color: #422030;
     border-color: #422030;
     background-color: #CC5496;
 }
 
 .indesign{
+    color: #4A2730;
     border-color: #4A2730;
     background-color: #F8558E;
 }
 
 .lightroom{
+    color: #364348;
     border-color: #364348;
     background-color: #A6D8EB;
 }
 
 .encoder{
+    color: #23303E;
     border-color: #23303E;
     background-color: #74A7D4;
 }
 
 .muse{
+    color: #343D1C;
     border-color: #343D1C;
     background-color: #B7C62F;
 }
 
 .photoshop{
+    color: #0D3943;
     border-color: #0D3943;
     background-color: #00B9DF;
 }
 
 .premiere{
+    color: #39243B;
     border-color: #39243B;
     background-color: #AA83B4;
 }
 
 .speedgrade{
+    color: #0B3738;
     border-color: #0B3738;
     background-color: #00B9BF;
 }
 
 .animate{
+    color: #002254;
     border-color: #002254;
     background-color: #7F92C4;
 }
 
 .code{
+    color: #163937;
     border-color: #163937;
     background-color: #00C0C8;
 }
 
 .inspect{
+    color: #552E1D;
     border-color: #552E1D;
     background-color: #FFA202;
 }
 
 .pgb{
+    color: #004D58;
     border-color: #004D58;
     background-color: #5FCFDF;
 }
 
 .reflow{
+    color: #002C46;
     border-color: #002C46;
     background-color: #00C3DE;
 }
 
 
-#role_results tr:nth-child(1) .bar{
+#role_results .result:nth-child(1) .bar{
+    color: #262338;
     border-color: #262338;
     background-color: #818BBE;
 }
 
-#role_results tr:nth-child(2) .bar{
+#role_results .result:nth-child(2) .bar{
+    color: #0A3532;
     border-color: #0A3532;
     background-color: #2CBCAD;
 }
 
-#role_results tr:nth-child(3) .bar{
+#role_results .result:nth-child(3) .bar{
+    color: #3C2814;
     border-color: #3C2814;
     background-color: #FFA700;
 }
 
-#role_results tr:nth-child(4) .bar{
+#role_results .result:nth-child(4) .bar{
+    color: #1C391A;
     border-color: #1C391A;
     background-color: #80B840;
 }
 
-#role_results tr:nth-child(5) .bar{
+#role_results .result:nth-child(5) .bar{
+    color: #19323F;
     border-color: #19323F;
     background-color: #5DABD9;
 }
 
-#role_results tr:nth-child(6) .bar{
+#role_results .result:nth-child(6) .bar{
+    color: #493717;
     border-color: #493717;
     background-color: #FFC000;
 }
 
-#role_results tr:nth-child(7) .bar{
+#role_results .result:nth-child(7) .bar{
+    color: #481917;
     border-color: #481917;
     background-color: #FA3B19;
 }
 
-#role_results tr:nth-child(8) .bar{
+#role_results .result:nth-child(8) .bar{
+    color: #43170F;
     border-color: #43170F;
     background-color: #FF6E13;
 }
 
-#role_results tr:nth-child(9) .bar{
+#role_results .result:nth-child(9) .bar{
+    color: #422030;
     border-color: #422030;
     background-color: #CC5496;
 }
 
-#role_results tr:nth-child(10) .bar{
+#role_results .result:nth-child(10) .bar{
+    color: #4A2730;
     border-color: #4A2730;
     background-color: #F8558E;
 }
 
-#role_results tr:nth-child(11) .bar{
+#role_results .result:nth-child(11) .bar{
+    color: #364348;
     border-color: #364348;
     background-color: #A6D8EB;
 }
 
-#role_results tr:nth-child(12) .bar{
+#role_results .result:nth-child(12) .bar{
+    color: #23303E;
     border-color: #23303E;
     background-color: #74A7D4;
 }
 
-#role_results tr:nth-child(13) .bar{
+#role_results .result:nth-child(13) .bar{
+    color: #343D1C;
     border-color: #343D1C;
     background-color: #B7C62F;
 }
 
-#role_results tr:nth-child(14) .bar{
+#role_results .result:nth-child(14) .bar{
+    color: #0D3943;
     border-color: #0D3943;
     background-color: #00B9DF;
 }
 
-#role_results tr:nth-child(15) .bar{
+#role_results .result:nth-child(15) .bar{
+    color: #39243B;
     border-color: #39243B;
     background-color: #AA83B4;
 }
 
-#role_results tr:nth-child(16) .bar{
+#role_results .result:nth-child(16) .bar{
+    color: #0B3738;
     border-color: #0B3738;
     background-color: #00B9BF;
 }
 
-#role_results tr:nth-child(17) .bar{
+#role_results .result:nth-child(17) .bar{
+    color: #002254;
     border-color: #002254;
     background-color: #7F92C4;
 }
 
-#role_results tr:nth-child(18) .bar{
+#role_results .result:nth-child(18) .bar{
+    color: #163937;
     border-color: #163937;
     background-color: #00C0C8;
 }
 
-#role_results tr:nth-child(19) .bar{
+#role_results .result:nth-child(19) .bar{
+    color: #552E1D;
     border-color: #552E1D;
     background-color: #FFA202;
 }
 
-#role_results tr:nth-child(20) .bar{
+#role_results .result:nth-child(20) .bar{
+    color: #004D58;
     border-color: #004D58;
     background-color: #5FCFDF;
 }
 
-#role_results tr:nth-child(21) .bar{
+#role_results .result:nth-child(21) .bar{
+    color: #002C46;
     border-color: #002C46;
     background-color: #00C3DE;
 }
