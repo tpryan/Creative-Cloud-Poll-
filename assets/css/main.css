@@ -75,7 +75,7 @@ section{
 
 .bar {
     background-color: #000000;
-    width: 30px;
+    width: 0px;
     height: 26px;
     -webkit-transition: width 1.5s ease-out; 
     vertical-align: top;
